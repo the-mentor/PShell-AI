@@ -40,18 +40,8 @@ However, if the user is clearly asking a question then answer it very briefly an
             else {
                 Write-Host -ForegroundColor Green "Copied to clipboard."
             }
-            
-            if($IsMacOS) {
-                $agentResponse | pbcopy
-            }
-            elseif ($IsLinux) {
-                if(Get-Command xclip -ErrorAction SilentlyContinue){
-                    $agentResponse | xclip -selection clipboard
-                }
-            }
-            else {
-                $agentResponse | clip
-            }
+            $agentResponse | Set-Clipboard
+
             break            
         }
     }
