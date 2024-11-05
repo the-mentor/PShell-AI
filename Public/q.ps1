@@ -44,13 +44,14 @@ However, if the user is clearly asking a question then answer it very briefly an
             if($IsMacOS) {
                 $agentResponse | pbcopy
             }
-            if($IsLinux) {
+            elseif ($IsLinux) {
                 if(Get-Command xclip -ErrorAction SilentlyContinue){
                     $agentResponse | xclip -selection clipboard
                 }
             }
             else {
                 $agentResponse | clip
+            }
             break            
         }
     }
