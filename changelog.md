@@ -1,3 +1,7 @@
+# V0.2.4
+
+- Thank you [the-mentor](https://github.com/the-mentor) - use `Set-Clipboard` instead of `clip` to work on Linux and MacOS
+
 # V0.2.3
 
 - Add support for `PwshSpectreConsole`
