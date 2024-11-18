@@ -40,7 +40,8 @@ However, if the user is clearly asking a question then answer it very briefly an
             else {
                 Write-Host -ForegroundColor Green "Copied to clipboard."
             }
-            $agentResponse | clip
+            $agentResponse | Set-Clipboard
+
             break            
         }
     }
